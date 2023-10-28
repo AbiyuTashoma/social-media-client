@@ -28,12 +28,12 @@ jobs:
 
     steps:
 
-      - uses: actions/workflow
-      - name: install package
-      run: npm i
-
-      - name: build project
-      run: npm run build
+      uses: actions/workflow
+      
+      name: install package
+      run: |
+        npm i
+        npm run build
       
   # Single deploy job since we're just deploying
   deploy:
