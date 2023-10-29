@@ -25,15 +25,11 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-
     steps:
-
-      uses: actions/workflow
+      - uses: actions/checkout@v3
       
-      name: install package
-      run: |
-        npm i
-        npm run build
+      - name: run project
+        run: npm i && npm run build
       
   # Single deploy job since we're just deploying
   deploy:
