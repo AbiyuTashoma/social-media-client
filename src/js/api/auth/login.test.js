@@ -6,8 +6,8 @@ const userPassword = "uPassword";
 const mockLoginSuccess = jest.fn().mockResolvedValue({
   ok: true,
   json: jest.fn().mockResolvedValue({
-    name: "profilename",
-    email: "profilename2@stud.noroff.no",
+    name: "Student",
+    email: "profile_name2@stud.noroff.no",
     avatar: "https://gravatar.com/avatar/=robohash&r=x",
     accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6Ik",
   }),
