@@ -29,8 +29,9 @@ describe("fetch and store user data", () => {
   it("fetches user data and saves it to local storage", async () => {
     const userData = await login(userEmail, userPassword);
     expect(localStorage.__STORE__["token"]).toBe(
-      JSON.stringify(userData.accessToken),
+      JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6Ik"),
     );
+    expect(userData.accessToken).toBe(undefined);
   });
 });
 
