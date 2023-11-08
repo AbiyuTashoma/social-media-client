@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Test",
   "type": "module",
   "main": "index.js",
@@ -8,8 +8,10 @@
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install",
-    "test": "npm run test-unit",
-    "test-unit": "jest"
+    "test": "npm run test-unit && npm run test-e2e-cli",
+    "test-unit": "jest",
+    "test-e2e": "cypress open",
+    "test-e2e-cli": "cypress run"
   },
   "keywords": [],
   "author": "Noroff",
@@ -17,7 +19,9 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.4",
+    "cypress": "^13.4.0",
     "eslint": "^8.52.0",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-jest": "^27.6.0",
     "husky": "^8.0.3",
     "jest-localstorage-mock": "^2.4.26",
