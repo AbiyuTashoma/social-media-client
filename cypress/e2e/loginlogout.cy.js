@@ -1,15 +1,15 @@
 import { login } from "../../src/js/api/auth/login";
 
 beforeEach(() => {
-  cy.visit("http://127.0.0.1:5500/index.html");
+  cy.visit("../../index.html");
 });
 
-describe("logsin and logout functionality", () => {
-  it("logs in and logs out clients", () => {
-    const userItem = "Student";
-    const emailItem = "profile_name2@stud.noroff.no";
-    const passwordItem = "theusualcode";
+describe("verify login and logout functionality", () => {
+  const userItem = "Student";
+  const emailItem = "profile_name2@stud.noroff.no";
+  const passwordItem = "theusualcode";
 
+  it("logs in and logs out clients", () => {
     cy.get('#registerForm [data-bs-target="#loginModal"]').click();
     cy.get("#loginModal input[type=email]").type(`${emailItem}`);
     cy.get("#loginModal input[type=password]").type(`${passwordItem}`);
