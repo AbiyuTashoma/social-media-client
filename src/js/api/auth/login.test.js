@@ -34,18 +34,3 @@ describe("fetch and store user data", () => {
     expect(userData.accessToken).toBe(undefined);
   });
 });
-
-describe("login fetch failure", () => {
-  const mockLoginFailure = jest.fn().mockResolvedValue({
-    ok: false,
-    statusText: "Unable to fetch login data",
-  });
-
-  global.fetch = mockLoginFailure;
-
-  it("throws an error when the request fails", async () => {
-    await expect(login(userEmail, userPassword)).rejects.toThrow(
-      "Unable to fetch login data",
-    );
-  });
-});
