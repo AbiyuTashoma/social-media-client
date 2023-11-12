@@ -18,14 +18,12 @@ Workflow Course Assignment
 
 ## Running
 
-To get started follow one of the options described below.
-
-1. clone the repo:
+To get started clone the repo:
 
 ```
 https://github.com/AbiyuTashoma/social-media-client/tree/workflow
 ```
-
+and then
 ```
 - npm run start
 - npm run test
